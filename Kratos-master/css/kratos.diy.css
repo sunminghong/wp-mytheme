@@ -1,0 +1,104 @@
+/* Update By ch 2017/08/16 */
+
+a:hover {
+    text-decoration: underline;
+}
+#kratos-menu-wrap .sf-menu a {
+    padding: 0.1em 0.4em!important;
+    font-size: 16px;
+}
+#kratos-menu-wrap .sf-menu a span.category {
+    padding: 0!important;
+    font-size: 16px;
+    color:#ccc;
+}
+
+.kratos-post-inner-new-full {
+    margin-left: 0;
+    padding: 21px 20px 0 20px;
+}
+
+.kratos-post-content code {
+	font-size: 14px;
+	line-height: 20px;
+	display: block;
+	padding: 1.2em;
+	overflow-x: auto;
+	margin: 5px 0;
+	border: none;
+	color: #666;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+	-webkit-text-size-adjust: none;
+}
+.kratos-post-content a {
+	color: #51aded;
+}
+.widget_author_avatars .author-list .user {
+	width: 50%;
+	padding-top: 0.6em !important;
+	padding-bottom: 0.6em !important;
+	border-bottom: 1px solid #f6f6f6;
+}
+.widget_author_avatars .author-list .user .avatar {
+	float: left;
+}
+.widget_author_avatars .author-list .user .avatar img {
+	width: 30px;
+	display: block;
+}
+.widget_author_avatars .author-list .user .name {
+	float: left;
+	padding-left: 0.5em;
+	width:70%;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	text-align: left;
+}
+#kratos-logo-img {
+	margin-top: 24px;
+}
+.sf-menu li.current-menu-item a, .sf-menu li.sfHover a, .sf-menu li:hover a, .sf-menu ul li.sfHover a, .sf-menu ul li:hover a {
+	color: #51aded;
+}
+.kratos-entry-thumb-new {
+	border: 1px solid #F3F3F3;
+	padding: 2px;
+}
+.kratos-entry-thumb-new a {
+	display: block;
+	height: 139px;
+	overflow: hidden;
+}
+.kratos-entry-thumb-new img {
+	padding: 0;
+	border: none;
+	width: 100% !important;
+	display: block;
+	height: auto;
+}
+.kratos-entry-thumb-new img[src=''] {
+	content: url(../images/nopic.jpg);
+}
+@media screen and (max-width:768px) {
+	.kratos-entry-thumb-new{
+		padding: 0;
+		border: none;
+	}
+	.kratos-entry-thumb-new a {
+		padding: 0;
+		height: auto;
+	}
+}
+
+
+ul, p{
+    margin-bottom: 1em;
+    font-size: 16px;
+    color: #333;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+#kratos-menu-wrap{float:none;}
+.sf-menu{width:75%;}
+.sf-menu li{display:inline-block;float:none;}
