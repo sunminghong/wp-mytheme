@@ -172,7 +172,7 @@ if($q_date == "today") {
     $data1=mysql_query($sql);
 
     $sql = "
-     select concat('<a href=\"p/',p.ID,'\">',left(p.post_title, 80),'</a>') as title,
+     select concat('<a href=\"p/',p.ID,'.html\">',left(p.post_title, 80),'</a>') as title,
      u.ID as user_id,
             (select group_concat(um.meta_value separator ' ') from wp_usermeta um where um.user_id=p.post_author and (um.meta_key = 'first_name' or um.meta_key='last_name')) as truename,
     case when instr(p.post_title,'【原创')=1 then 'W' when instr(p.post_title,'【转载')=1 then 'S' else 'O' end as fromwhere,
@@ -200,7 +200,7 @@ post_detail where yymm=${q_date} group by user_id,username,nicename,truename
     $data1 = mysql_query($sql);
     
 
-    $sql = "select concat('<a href=\"p/',post_id,'\">',left(title,80),'</a>') as title,concat('<a href=\"/p/author/',username, '\">',nicename,'(',truename,')</a>') as author,
+    $sql = "select concat('<a href=\"p/',post_id,'.html\">',left(title,80),'</a>') as title,concat('<a href=\"/p/author/',username, '\">',nicename,'(',truename,')</a>') as author,
         case iswrite when 2 then 'W' when 1 then 'S' else 'O' end as fromwhere,views,comments,loves from post_detail where yymm=${q_date} 
         order by iswrite desc,views desc,comments desc,loves desc";
     $data2 = mysql_query($sql);
@@ -209,7 +209,7 @@ post_detail where yymm=${q_date} group by user_id,username,nicename,truename
 
 echo '<h3>作者统计</h3>';
 showtable($data1, "authortable");
-echo '<h3>文章详细</h3>';
+echo '<h3>文章详细(W=write,S=share,O=Other)</h3>';
 showtable($data2,"posttable");
 
 mysql_close($con);
